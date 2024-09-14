@@ -1,50 +1,33 @@
-# React + TypeScript + Vite
+# Memory Game
+================
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple memory game built with React and styled-components.
 
-Currently, two official plugins are available:
+## Game Overview
+---------------
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+The game consists of a grid of cards with different values. The player flips two cards at a time to try to find a match. If the cards match, they remain flipped. If they don't match, they flip back over. The game continues until all cards are matched.
 
-## Expanding the ESLint configuration
+## Features
+--------
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+* Adjustable grid size
+* Card flipping animation
+* Matched cards pulse animation
+* Game reset feature
 
-- Configure the top-level `parserOptions` property like this:
+## Technologies Used
+------------------
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+* React
+* styled-components
+* JavaScript
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## Installation
+------------
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+To run the game locally, clone the repository and run:
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+```bash
+npm install
+npm start
